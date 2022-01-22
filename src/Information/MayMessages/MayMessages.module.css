@@ -1,0 +1,23 @@
+.dialogs {
+    display: grid;
+    grid-area: c;
+    grid-template-columns: 3fr 10fr;
+    background-color: lightgoldenrodyellow;
+    width: 1000px;
+    height: 687px;
+}
+
+.dialogsItem a {
+    padding: 10px;
+    color: indigo;
+    text-decoration: none;
+}
+
+.messages {
+    padding: 10px;
+    color: indigo;
+}
+
+.messages .message {
+
+}

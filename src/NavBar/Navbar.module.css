@@ -1,0 +1,11 @@
+.navbar {
+    grid-area: m;
+    background-color: bisque;
+    padding: 20px;
+}
+
+.item a {
+    color: saddlebrown;
+    text-decoration: none;
+}
+

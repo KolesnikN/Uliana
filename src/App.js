@@ -1,18 +1,27 @@
 import React from 'react';
 import css from './App.css';
-import Header from "./Header";
-import NavBar from "./NavBar";
-import Nav from "./Information";
+import Header from "./Header/Header";
+import NavBar from "./NavBar/NavBar";
+import Information from "./Information/Information";
+import MayMessages from "./Information/MayMessages/MayMessages";
+import {BrowserRouter, Route} from "react-router-dom";
 
 
-const App = () => {
+const App = (props) => {
     return (
-        <div className={css.wrapper}>
-            <Header />
-            <NavBar />
-            <Nav />
-        </div>
+        <BrowserRouter>
+            <div className="wrapper">
+                <Header/>
+                <NavBar/>
+                <div className={css.paper}>
+                    <Route path='/mayMessages' render={ () => <MayMessages />}/>
+                    <Route path='/information' render={ () => <Information />}/>
+                </div>
+            </div>
+        </BrowserRouter>
     )
 }
 
 export default App;
+
+
