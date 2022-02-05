@@ -18,6 +18,15 @@
     color: indigo;
 }
 
-.messages .message {
+.item textarea {
+    border-radius: 60px;
+    width: 500px;
+    padding: 10px;
+}
 
+.item button {
+    border-radius: 60px;
+    width: 100px;
+    color: indigo;
+    padding: 10px;
 }

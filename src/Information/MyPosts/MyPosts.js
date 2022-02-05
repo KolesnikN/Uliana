@@ -2,24 +2,29 @@ import css from "./MyPosts.module.css";
 import React from "react";
 import Post from "./Post/Post";
 
-let postData = [
-    {id: 1, post: 'Hi, how are you?', myrrCount: 15},
-    {id: 2, post: 'My first post!', myrrCount: 25},
-]
 
-let postsElement = postData
-    .map (p => <Post message={p.post} MyrrCount={p.myrrCount}/>);
+const MyPosts = (props) => {
 
-const MyPosts = () => {
+
+let postsElement = props.postData.map(p => <Post message={p.post} MyrrCount={p.myrrCount}/>)
+
+let newPostElement = React.createRef();
+    
+let addPost = () => {
+    let text = newPostElement.current.value;
+    props.addPost(text);
+    newPostElement.current.value='';
+}
+
     return (<div className={css.MyPosts}>
             <div className={css.item}>
                 May posts
                 <div>
                     <div>
-                        <textarea></textarea>
+                        <textarea ref={newPostElement}></textarea>
                     </div>
                     <div>
-                        <button>Add post</button>
+                        <button onClick={addPost}>Add post</button>
                     </div>
                 </div>
                 <div className={css.Post}>
