@@ -4,13 +4,12 @@
     width: 1200px;
     height: 687px;
     grid-template-areas:
-    "h h"
-    "m c";
+        'h h'
+        'm c';
     grid-template-rows: 225px 2fr;
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
 }
-
 
 .paper {
     grid-area: c;
