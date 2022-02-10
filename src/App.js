@@ -30,7 +30,13 @@ const App = props => {
                 />
                 <Route
                     path='/information'
-                    render={() => <Information profilePage={props.state.profilePage} addPost={props.addPost} />}
+                    render={() => (
+                        <Information
+                            profilePage={props.state.profilePage}
+                            addPost={props.addPost}
+                            updateNewPostText={props.updateNewPostText}
+                        />
+                    )}
                 />
             </div>
         </div>
